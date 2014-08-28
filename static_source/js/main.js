@@ -180,8 +180,8 @@
 		$(document).on('submit', '#navbar-search.google', function(){
 			var q = $(this).find('[name=q]').val();
 			if($.trim(q) !== ''){
-				var host = window.location.hostname + ":" + window.location.port;
-				var url = 'http://www.google.com/search?q=' + 'site:' + host + '/p%20' +  escape($.trim(q));
+				var host = window.location.hostname;
+				var url = 'http://www.so.com/s?q=' +   $.trim(q) + '%20site:' + host;
 				window.open(url, "_blank");
 			}
 			return false;
